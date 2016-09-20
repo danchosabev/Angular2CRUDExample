@@ -1,8 +1,8 @@
 ﻿import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './app-home.component';
-import { CarListComponent } from './app-car-list.component';
+import { HomeComponent } from './components/home/home.component';
+import { CarListComponent } from './components/cars/car-list.component';
 
 const appRoutes: Routes = [
 	{

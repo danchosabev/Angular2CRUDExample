@@ -15,13 +15,13 @@ var http_1 = require('@angular/http');
 // PrimeNG
 var primeng_1 = require('primeng/primeng');
 var primeng_2 = require('primeng/primeng');
-var app_component_1 = require('./app.component');
-var app_home_component_1 = require('./app-home.component');
-var helper_service_1 = require('./helper.service');
+var app_component_1 = require('./components/app.component');
+var home_component_1 = require('./components/home/home.component');
+var helper_service_1 = require('./helpers/helper.service');
 // Cars
-var app_car_list_component_1 = require('./app-car-list.component');
-var car_service_1 = require('./car.service');
-//import { routing } from './app.routing';
+var car_list_component_1 = require('./components/cars/car-list.component');
+var car_service_1 = require('./services/car.service');
+var app_routing_1 = require('./app.routing');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -43,11 +43,12 @@ var AppModule = (function () {
                 primeng_2.DropdownModule,
                 forms_1.FormsModule,
                 http_1.HttpModule,
+                app_routing_1.routing
             ],
             declarations: [
                 app_component_1.AppComponent,
-                app_home_component_1.HomeComponent,
-                app_car_list_component_1.CarListComponent
+                home_component_1.HomeComponent,
+                car_list_component_1.CarListComponent
             ],
             providers: [
                 helper_service_1.HelperService,
@@ -60,3 +61,5 @@ var AppModule = (function () {
     return AppModule;
 }());
 exports.AppModule = AppModule;
+
+//# sourceMappingURL=app.module.js.map
