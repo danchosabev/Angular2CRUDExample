@@ -9,11 +9,11 @@ import {PanelModule, DialogModule, TooltipModule, ToolbarModule, ButtonModule, D
 
 import { AppComponent } from './components/app.component';
 import { HomeComponent } from './components/home/home.component';
-import { HelperService } from './helpers/helper.service';
+import { HelperService } from './components/helpers/helper.service';
 
 // Cars
-import { CarListComponent } from './components/cars/car-list.component';
-import { CarService } from './services/car.service';
+import { CarListComponent } from './components/cars/car-list/car-list.component';
+import { CarService } from './components/cars/shared/car.service';
 
 import { routing } from './app.routing';
 

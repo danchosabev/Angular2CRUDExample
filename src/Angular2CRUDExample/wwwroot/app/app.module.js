@@ -17,10 +17,10 @@ var primeng_1 = require('primeng/primeng');
 var primeng_2 = require('primeng/primeng');
 var app_component_1 = require('./components/app.component');
 var home_component_1 = require('./components/home/home.component');
-var helper_service_1 = require('./helpers/helper.service');
+var helper_service_1 = require('./components/helpers/helper.service');
 // Cars
-var car_list_component_1 = require('./components/cars/car-list.component');
-var car_service_1 = require('./services/car.service');
+var car_list_component_1 = require('./components/cars/car-list/car-list.component');
+var car_service_1 = require('./components/cars/shared/car.service');
 var app_routing_1 = require('./app.routing');
 var AppModule = (function () {
     function AppModule() {
