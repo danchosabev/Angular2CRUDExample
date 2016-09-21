@@ -11,16 +11,14 @@ var srcPaths = {
 	app: ['app/**/*.ts'],
 	app_files: ['app/**/*.html', 'app/**/*.css'],
 	libs: [		
-		'core-js/client/shim.min.js',
-		'zone.js/dist/zone.js',
-		'reflect-metadata/Reflect.js',
-		'systemjs/dist/system.src.js',
-		//'typescript/lib/typescript.js',
-		'bootstrap/dist/js/bootstrap.*js',
-		'moment/moment.js',
-		'@angular/**',
-		'rxjs/**',
-		'primeng/**'
+		'node_modules/core-js/client/shim.min.js',
+		'node_modules/zone.js/dist/zone.js',
+		'node_modules/reflect-metadata/Reflect.js',
+		'node_modules/systemjs/dist/system.src.js',		
+		'node_modules/bootstrap/dist/js/bootstrap.*js',		
+		'node_modules/@angular/**',
+		'node_modules/rxjs/**',
+		'node_modules/primeng/**'
 	]
 };
 
@@ -54,7 +52,7 @@ gulp.task('app_clean', function () {
 
 // Copy all Libs files from external libraries to wwwroot/libs
 gulp.task('libs', function () {	
-	return gulp.src(srcPaths.libs, {cwd: "node_modules/**"})
+	return gulp.src(srcPaths.libs, {base: "node_modules"})
 		.pipe(gulp.dest(destPaths.libs));
 });
 
