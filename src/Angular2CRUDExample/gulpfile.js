@@ -7,7 +7,10 @@
 /// Define paths
 var srcPaths = {
 	app: ['app/**/*.ts'],
-	app_files: ['app/**/*.html', 'app/**/*.css'],
+	app_files: [
+		'app/**/*.html',
+		'app/**/*.css'
+	],
 	libs: [		
 		'node_modules/core-js/client/shim.min.js',
 		'node_modules/zone.js/dist/zone.js',
