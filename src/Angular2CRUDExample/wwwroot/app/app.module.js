@@ -12,6 +12,8 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
+// Imports for loading & configuring the in-memory web api
+var angular2_in_memory_web_api_1 = require('angular2-in-memory-web-api');
 // PrimeNG
 var primeng_1 = require('primeng/primeng');
 var primeng_2 = require('primeng/primeng');
@@ -21,6 +23,11 @@ var helper_service_1 = require('./components/helpers/helper.service');
 // Cars
 var car_list_component_1 = require('./components/cars/car-list/car-list.component');
 var car_service_1 = require('./components/cars/shared/car.service');
+// Heroes
+var hero_list_component_1 = require('./components/heroes/hero-list.component');
+var hero_details_component_1 = require('./components/heroes/hero-details.component');
+var hero_service_1 = require('./components/heroes/hero.service');
+var hero_in_memory_data_service_1 = require('./components/heroes/hero-in-memory-data.service');
 var app_routing_1 = require('./app.routing');
 var AppModule = (function () {
     function AppModule() {
@@ -43,16 +50,20 @@ var AppModule = (function () {
                 primeng_2.DropdownModule,
                 forms_1.FormsModule,
                 http_1.HttpModule,
+                angular2_in_memory_web_api_1.InMemoryWebApiModule.forRoot(hero_in_memory_data_service_1.HeroInMemoryDataService),
                 app_routing_1.routing
             ],
             declarations: [
                 app_component_1.AppComponent,
                 home_component_1.HomeComponent,
-                car_list_component_1.CarListComponent
+                car_list_component_1.CarListComponent,
+                hero_list_component_1.HeroListComponent,
+                hero_details_component_1.HeroDetailsComponent
             ],
             providers: [
                 helper_service_1.HelperService,
-                car_service_1.CarService
+                car_service_1.CarService,
+                hero_service_1.HeroService
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

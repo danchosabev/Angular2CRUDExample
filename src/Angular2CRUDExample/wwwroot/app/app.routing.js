@@ -2,6 +2,8 @@
 var router_1 = require('@angular/router');
 var home_component_1 = require('./components/home/home.component');
 var car_list_component_1 = require('./components/cars/car-list/car-list.component');
+var hero_list_component_1 = require('./components/heroes/hero-list.component');
+var hero_details_component_1 = require('./components/heroes/hero-details.component');
 var appRoutes = [
     {
         path: '',
@@ -12,6 +14,14 @@ var appRoutes = [
     {
         path: 'cars',
         component: car_list_component_1.CarListComponent
+    },
+    {
+        path: 'heroes',
+        component: hero_list_component_1.HeroListComponent
+    },
+    {
+        path: 'hero-detail/:id',
+        component: hero_details_component_1.HeroDetailsComponent
     }
 ];
 exports.routing = router_1.RouterModule.forRoot(appRoutes);

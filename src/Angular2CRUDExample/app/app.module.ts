@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+// Imports for loading & configuring the in-memory web api
+import { InMemoryWebApiModule } from 'angular2-in-memory-web-api';
+
 // PrimeNG
 import {InputTextModule, DataTableModule, SharedModule, DataListModule, PaginatorModule, DataGridModule} from 'primeng/primeng';
 import {PanelModule, DialogModule, TooltipModule, ToolbarModule, ButtonModule, DropdownModule} from 'primeng/primeng';
@@ -14,6 +17,12 @@ import { HelperService } from './components/helpers/helper.service';
 // Cars
 import { CarListComponent } from './components/cars/car-list/car-list.component';
 import { CarService } from './components/cars/shared/car.service';
+
+// Heroes
+import { HeroListComponent } from './components/heroes/hero-list.component';
+import { HeroDetailsComponent } from './components/heroes/hero-details.component';
+import { HeroService } from './components/heroes/hero.service';
+import { HeroInMemoryDataService }  from './components/heroes/hero-in-memory-data.service';
 
 import { routing } from './app.routing';
 
@@ -33,17 +42,21 @@ import { routing } from './app.routing';
 		ButtonModule,
 		DropdownModule,
 		FormsModule,
-		HttpModule,		
+		HttpModule,
+		InMemoryWebApiModule.forRoot(HeroInMemoryDataService),
 		routing
 	],
 	declarations: [
 		AppComponent,		
 		HomeComponent,		
-		CarListComponent		
+		CarListComponent,
+		HeroListComponent,
+		HeroDetailsComponent
 	],
 	providers: [
 		HelperService,
-		CarService
+		CarService,
+		HeroService
 	],
 	bootstrap: [AppComponent]
 })

@@ -19,7 +19,8 @@ var srcPaths = {
 		'node_modules/bootstrap/dist/js/bootstrap.*js',		
 		'node_modules/@angular/**',
 		'node_modules/rxjs/**',
-		'node_modules/primeng/**'
+		'node_modules/primeng/**',
+		'node_modules/angular2-in-memory-web-api/**'
 	]
 };
 

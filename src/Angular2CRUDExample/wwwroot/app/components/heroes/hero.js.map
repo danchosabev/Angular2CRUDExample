@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/heroes/hero.ts"],"names":[],"mappings":";AAAA;IAAA;IAGA,CAAC;IAAD,WAAC;AAAD,CAHA,AAGC,IAAA;AAHY,YAAI,OAGhB,CAAA","file":"components/heroes/hero.js","sourcesContent":["export class Hero {\n\tid: number;\n\tname: string;\n}\n"],"sourceRoot":"/source/"}
