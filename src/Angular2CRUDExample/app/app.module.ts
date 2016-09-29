@@ -1,7 +1,7 @@
 ﻿import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, JsonpModule  } from '@angular/http';
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular2-in-memory-web-api';
@@ -24,7 +24,11 @@ import { HeroDetailsComponent } from './components/heroes/hero-details.component
 import { HeroService } from './components/heroes/hero.service';
 import { HeroInMemoryDataService }  from './components/heroes/hero-in-memory-data.service';
 import { HeroSearchComponent } from './components/heroes/hero-search.component';
-import './components/heroes/rxjs-extensions';
+
+// Http
+import { HttpDemoModule } from './components/http-demo/http-demo.module';
+
+import './components/shared/rxjs-extensions';
 
 import { routing } from './app.routing';
 
@@ -45,8 +49,10 @@ import { routing } from './app.routing';
 		DropdownModule,
 		FormsModule,
 		HttpModule,
+		JsonpModule,
 		InMemoryWebApiModule.forRoot(HeroInMemoryDataService),
-		routing
+		routing,
+		HttpDemoModule
 	],
 	declarations: [
 		AppComponent,		
@@ -54,7 +60,7 @@ import { routing } from './app.routing';
 		CarListComponent,
 		HeroListComponent,
 		HeroDetailsComponent,
-		HeroSearchComponent
+		HeroSearchComponent		
 	],
 	providers: [
 		HelperService,

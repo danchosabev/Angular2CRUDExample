@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CarListComponent } from './components/cars/car-list/car-list.component';
 import { HeroListComponent } from './components/heroes/hero-list.component';
 import { HeroDetailsComponent } from './components/heroes/hero-details.component';
+import { HttpDemoComponent } from './components/http-demo/http-demo.component';
 
 const appRoutes: Routes = [
 	{
@@ -24,6 +25,10 @@ const appRoutes: Routes = [
 	{
 		path: 'hero-detail/:id',
 		component: HeroDetailsComponent
+	},
+	{
+		path: 'http',
+		component: HttpDemoComponent
 	}
 ];
 
