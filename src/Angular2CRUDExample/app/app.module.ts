@@ -23,6 +23,8 @@ import { HeroListComponent } from './components/heroes/hero-list.component';
 import { HeroDetailsComponent } from './components/heroes/hero-details.component';
 import { HeroService } from './components/heroes/hero.service';
 import { HeroInMemoryDataService }  from './components/heroes/hero-in-memory-data.service';
+import { HeroSearchComponent } from './components/heroes/hero-search.component';
+import './components/heroes/rxjs-extensions';
 
 import { routing } from './app.routing';
 
@@ -51,7 +53,8 @@ import { routing } from './app.routing';
 		HomeComponent,		
 		CarListComponent,
 		HeroListComponent,
-		HeroDetailsComponent
+		HeroDetailsComponent,
+		HeroSearchComponent
 	],
 	providers: [
 		HelperService,

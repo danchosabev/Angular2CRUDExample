@@ -28,6 +28,8 @@ var hero_list_component_1 = require('./components/heroes/hero-list.component');
 var hero_details_component_1 = require('./components/heroes/hero-details.component');
 var hero_service_1 = require('./components/heroes/hero.service');
 var hero_in_memory_data_service_1 = require('./components/heroes/hero-in-memory-data.service');
+var hero_search_component_1 = require('./components/heroes/hero-search.component');
+require('./components/heroes/rxjs-extensions');
 var app_routing_1 = require('./app.routing');
 var AppModule = (function () {
     function AppModule() {
@@ -58,7 +60,8 @@ var AppModule = (function () {
                 home_component_1.HomeComponent,
                 car_list_component_1.CarListComponent,
                 hero_list_component_1.HeroListComponent,
-                hero_details_component_1.HeroDetailsComponent
+                hero_details_component_1.HeroDetailsComponent,
+                hero_search_component_1.HeroSearchComponent
             ],
             providers: [
                 helper_service_1.HelperService,
