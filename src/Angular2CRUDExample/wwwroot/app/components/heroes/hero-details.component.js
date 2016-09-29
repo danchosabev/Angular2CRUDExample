@@ -27,6 +27,11 @@ var HeroDetailsComponent = (function () {
     HeroDetailsComponent.prototype.goBack = function () {
         window.history.back();
     };
+    HeroDetailsComponent.prototype.save = function () {
+        var _this = this;
+        this.heroService.update(this.hero)
+            .then(function () { return _this.goBack(); });
+    };
     HeroDetailsComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

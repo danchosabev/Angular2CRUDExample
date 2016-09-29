@@ -30,6 +30,29 @@ var HeroListComponent = (function () {
     HeroListComponent.prototype.gotoDetail = function () {
         this.router.navigate(['/hero-detail', this.selectedHero.id]);
     };
+    HeroListComponent.prototype.add = function (name) {
+        var _this = this;
+        name = name.trim();
+        if (!name) {
+            return;
+        }
+        this.heroService.create(name)
+            .then(function (hero) {
+            _this.heroes.push(hero);
+            _this.selectedHero = null;
+        });
+    };
+    HeroListComponent.prototype.delete = function (hero) {
+        var _this = this;
+        this.heroService
+            .delete(hero.id)
+            .then(function () {
+            _this.heroes = _this.heroes.filter(function (h) { return h !== hero; });
+            if (_this.selectedHero === hero) {
+                _this.selectedHero = null;
+            }
+        });
+    };
     HeroListComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
