@@ -1,7 +1,7 @@
 ﻿import { Component, OnInit } from '@angular/core';
 
 import { Hero } from '../shared/hero';
-import { HeroService } from '../shared/hero.service';
+import { DemoHeroService } from '../shared/demo-hero.service';
 
 @Component({
 	moduleId: module.id,
@@ -14,7 +14,7 @@ export class HttpHeroListComponent implements OnInit {
 	heroes: Hero[];
 	mode = 'Observable';
 
-	constructor(private heroService: HeroService) { }
+	constructor(private heroService: DemoHeroService) { }
 
 	ngOnInit() { this.getHeroes(); }
 

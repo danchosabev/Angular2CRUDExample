@@ -1,19 +1,23 @@
 ﻿import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { Routes, RouterModule } from '@angular/router';
+import { CommonModule } from "@angular/common";
 import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 
 import { HttpDemoComponent } from './http-demo.component';
 import { HttpHeroListComponent } from './http-hero-list/http-hero-list.component';
-import { HeroService } from './shared/hero.service';
+import { DemoHeroService } from './shared/demo-hero.service';
 
 @NgModule({
 	imports: [
-		BrowserModule,
+		CommonModule,
 		FormsModule,
 		HttpModule,
-		JsonpModule
-	],
+		JsonpModule,
+		RouterModule.forChild([{
+			path: '',
+			component: HttpDemoComponent
+		}])],
 	exports: [
 		HttpDemoComponent
 	],
@@ -22,7 +26,7 @@ import { HeroService } from './shared/hero.service';
 		HttpHeroListComponent
 	],
 	providers: [
-		HeroService
+		DemoHeroService
 	]
 })
-export class HttpDemoModule { }
+export default class HttpDemoModule { }

@@ -5,7 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CarListComponent } from './components/cars/car-list/car-list.component';
 import { HeroListComponent } from './components/heroes/hero-list.component';
 import { HeroDetailsComponent } from './components/heroes/hero-details.component';
-import { HttpDemoComponent } from './components/http-demo/http-demo.component';
+//import { HttpDemoComponent } from './components/http-demo/http-demo.component';
 
 const appRoutes: Routes = [
 	{
@@ -23,13 +23,18 @@ const appRoutes: Routes = [
 		component: HeroListComponent
 	},
 	{
-		path: 'hero-detail/:id',
+		path: 'hero-detail/:id',		
 		component: HeroDetailsComponent
 	},
 	{
 		path: 'http',
-		component: HttpDemoComponent
-	}
+		loadChildren: '/app/components/http-demo/http-demo.module'
+		//component: HttpDemoComponent
+	},
+	//{
+ //       path: "**",
+ //       component: PageNotFoundComponent
+	//}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

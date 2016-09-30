@@ -30,7 +30,7 @@ var hero_service_1 = require('./components/heroes/hero.service');
 var hero_in_memory_data_service_1 = require('./components/heroes/hero-in-memory-data.service');
 var hero_search_component_1 = require('./components/heroes/hero-search.component');
 // Http
-var http_demo_module_1 = require('./components/http-demo/http-demo.module');
+//import { HttpDemoModule } from './components/http-demo/http-demo.module';
 require('./components/shared/rxjs-extensions');
 var app_routing_1 = require('./app.routing');
 var AppModule = (function () {
@@ -56,8 +56,7 @@ var AppModule = (function () {
                 http_1.HttpModule,
                 http_1.JsonpModule,
                 angular2_in_memory_web_api_1.InMemoryWebApiModule.forRoot(hero_in_memory_data_service_1.HeroInMemoryDataService),
-                app_routing_1.routing,
-                http_demo_module_1.HttpDemoModule
+                app_routing_1.routing
             ],
             declarations: [
                 app_component_1.AppComponent,

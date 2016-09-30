@@ -9,23 +9,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
+var router_1 = require('@angular/router');
+var common_1 = require("@angular/common");
 var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
 var http_demo_component_1 = require('./http-demo.component');
 var http_hero_list_component_1 = require('./http-hero-list/http-hero-list.component');
-var hero_service_1 = require('./shared/hero.service');
+var demo_hero_service_1 = require('./shared/demo-hero.service');
 var HttpDemoModule = (function () {
     function HttpDemoModule() {
     }
     HttpDemoModule = __decorate([
         core_1.NgModule({
             imports: [
-                platform_browser_1.BrowserModule,
+                common_1.CommonModule,
                 forms_1.FormsModule,
                 http_1.HttpModule,
-                http_1.JsonpModule
-            ],
+                http_1.JsonpModule,
+                router_1.RouterModule.forChild([{
+                        path: '',
+                        component: http_demo_component_1.HttpDemoComponent
+                    }])],
             exports: [
                 http_demo_component_1.HttpDemoComponent
             ],
@@ -34,13 +38,14 @@ var HttpDemoModule = (function () {
                 http_hero_list_component_1.HttpHeroListComponent
             ],
             providers: [
-                hero_service_1.HeroService
+                demo_hero_service_1.DemoHeroService
             ]
         }), 
         __metadata('design:paramtypes', [])
     ], HttpDemoModule);
     return HttpDemoModule;
 }());
-exports.HttpDemoModule = HttpDemoModule;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = HttpDemoModule;
 
 //# sourceMappingURL=http-demo.module.js.map

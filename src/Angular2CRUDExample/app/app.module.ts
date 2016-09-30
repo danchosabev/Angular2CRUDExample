@@ -26,7 +26,7 @@ import { HeroInMemoryDataService }  from './components/heroes/hero-in-memory-dat
 import { HeroSearchComponent } from './components/heroes/hero-search.component';
 
 // Http
-import { HttpDemoModule } from './components/http-demo/http-demo.module';
+//import { HttpDemoModule } from './components/http-demo/http-demo.module';
 
 import './components/shared/rxjs-extensions';
 
@@ -51,8 +51,8 @@ import { routing } from './app.routing';
 		HttpModule,
 		JsonpModule,
 		InMemoryWebApiModule.forRoot(HeroInMemoryDataService),
-		routing,
-		HttpDemoModule
+		routing
+		//HttpDemoModule
 	],
 	declarations: [
 		AppComponent,		

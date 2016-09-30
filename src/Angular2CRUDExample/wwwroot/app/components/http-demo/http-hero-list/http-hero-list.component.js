@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var hero_service_1 = require('../shared/hero.service');
+var demo_hero_service_1 = require('../shared/demo-hero.service');
 var HttpHeroListComponent = (function () {
     function HttpHeroListComponent(heroService) {
         this.heroService = heroService;
@@ -27,7 +27,7 @@ var HttpHeroListComponent = (function () {
             selector: 'http-hero-list',
             templateUrl: 'http-hero-list.component.html'
         }), 
-        __metadata('design:paramtypes', [hero_service_1.HeroService])
+        __metadata('design:paramtypes', [demo_hero_service_1.DemoHeroService])
     ], HttpHeroListComponent);
     return HttpHeroListComponent;
 }());

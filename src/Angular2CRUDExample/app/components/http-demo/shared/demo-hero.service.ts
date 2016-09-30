@@ -4,7 +4,7 @@ import { Hero }           from './hero';
 import { Observable }     from 'rxjs/Observable';
 
 @Injectable()
-export class HeroService {
+export class DemoHeroService {
 
 	private heroesUrl = 'app/heroes';  // URL to web API
 
