@@ -51,7 +51,7 @@ import { routing } from './app.routing';
 		HttpModule,
 		JsonpModule,
 		InMemoryWebApiModule.forRoot(HeroInMemoryDataService),
-		routing
+		routing,
 		//HttpDemoModule
 	],
 	declarations: [

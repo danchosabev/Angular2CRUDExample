@@ -16,6 +16,8 @@ var http_1 = require('@angular/http');
 var http_demo_component_1 = require('./http-demo.component');
 var http_hero_list_component_1 = require('./http-hero-list/http-hero-list.component');
 var demo_hero_service_1 = require('./shared/demo-hero.service');
+var angular2_in_memory_web_api_1 = require('angular2-in-memory-web-api');
+var hero_in_memory_data_service_1 = require('../heroes/hero-in-memory-data.service');
 var HttpDemoModule = (function () {
     function HttpDemoModule() {
     }
@@ -26,10 +28,12 @@ var HttpDemoModule = (function () {
                 forms_1.FormsModule,
                 http_1.HttpModule,
                 http_1.JsonpModule,
+                angular2_in_memory_web_api_1.InMemoryWebApiModule.forRoot(hero_in_memory_data_service_1.HeroInMemoryDataService),
                 router_1.RouterModule.forChild([{
                         path: '',
                         component: http_demo_component_1.HttpDemoComponent
-                    }])],
+                    }])
+            ],
             exports: [
                 http_demo_component_1.HttpDemoComponent
             ],

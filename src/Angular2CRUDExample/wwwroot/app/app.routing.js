@@ -25,7 +25,7 @@ var appRoutes = [
         component: hero_details_component_1.HeroDetailsComponent
     },
     {
-        path: 'http',
+        path: 'http-demo',
         loadChildren: '/app/components/http-demo/http-demo.module'
     },
 ];

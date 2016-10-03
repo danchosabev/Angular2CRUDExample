@@ -8,16 +8,21 @@ import { HttpDemoComponent } from './http-demo.component';
 import { HttpHeroListComponent } from './http-hero-list/http-hero-list.component';
 import { DemoHeroService } from './shared/demo-hero.service';
 
+import { InMemoryWebApiModule } from 'angular2-in-memory-web-api';
+import { HeroInMemoryDataService }  from '../heroes/hero-in-memory-data.service';
+
 @NgModule({
 	imports: [
 		CommonModule,
 		FormsModule,
 		HttpModule,
 		JsonpModule,
+		InMemoryWebApiModule.forRoot(HeroInMemoryDataService),
 		RouterModule.forChild([{
 			path: '',
 			component: HttpDemoComponent
-		}])],
+		}])
+	],
 	exports: [
 		HttpDemoComponent
 	],

@@ -56,7 +56,7 @@ var AppModule = (function () {
                 http_1.HttpModule,
                 http_1.JsonpModule,
                 angular2_in_memory_web_api_1.InMemoryWebApiModule.forRoot(hero_in_memory_data_service_1.HeroInMemoryDataService),
-                app_routing_1.routing
+                app_routing_1.routing,
             ],
             declarations: [
                 app_component_1.AppComponent,

@@ -27,7 +27,7 @@ const appRoutes: Routes = [
 		component: HeroDetailsComponent
 	},
 	{
-		path: 'http',
+		path: 'http-demo',
 		loadChildren: '/app/components/http-demo/http-demo.module'
 		//component: HttpDemoComponent
 	},
